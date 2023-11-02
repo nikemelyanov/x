@@ -1,5 +1,5 @@
 import express from 'express';
-import { SneakersController } from '../../controllers/sneakers';
+import { SneakersController } from '../../entities/items/sneakers/controllers';
 
 const router = express.Router();
 
