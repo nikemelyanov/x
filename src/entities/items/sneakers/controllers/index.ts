@@ -1,4 +1,4 @@
-import { SneakersService } from '../../services/sneakers';
+import { SneakersService } from '../services';
 
 export class SneakersController {
   static async All(req: any, res: any) {
