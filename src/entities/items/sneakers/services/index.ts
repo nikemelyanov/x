@@ -11,9 +11,10 @@ export class SneakersService {
   static async Create(item: any) {
     const result = await prisma.product.create({
       data: {
-        model: item.model,
+        name: item.name,
         price: item.price,
-        image: item.image
+        image: item.image,
+        description: item.description
       },
     });
   }
@@ -21,7 +22,7 @@ export class SneakersService {
   static async Delete(item: any) {
     const result = await prisma.product.delete({
       where: {
-        model: item.model
+        name: item.name
       }
     });
   }

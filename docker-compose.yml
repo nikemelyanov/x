@@ -15,7 +15,7 @@ services:
     container_name: pgadmin_sneackers
     image: dpage/pgadmin4
     environment:
-      PGADMIN_DEFAULT_EMAIL: emelyanov@mail.ru
+      PGADMIN_DEFAULT_EMAIL: root@mail.ru
       PGADMIN_DEFAULT_PASSWORD: root
     ports:
       - "5050:80"
