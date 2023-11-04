@@ -34,6 +34,7 @@ model Product {
   updatedAt   DateTime  @updatedAt
   cartItems   CartItem[]
   orders      Order[]
+  carts       Cart[]
 }
 
 // Cart для хранения информации о корзине, включая связь с пользователем и корзинными элементами.
@@ -44,6 +45,7 @@ model Cart {
   user      User       @relation(fields: [userId], references: [id])
   userId    Int        @unique
   cartItems CartItem[]
+  products  Product[]
 }
 
 // CartItem для хранения информации о товарах в корзине, включая количество, связь с пользователем и товаром.

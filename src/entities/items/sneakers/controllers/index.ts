@@ -13,7 +13,8 @@ export class SneakersController {
     }
 
     const item = {
-      model: req.body.model,
+      name: req.body.name,
+      description: req.body.description,
       price: req.body.price,
       image: req.body.image,
     };

@@ -2,18 +2,18 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 export class SneakersService {
-
   static async All() {
     const result = await prisma.product.findMany();
-    return result
-  }  
+    return result;
+  }
 
   static async Create(item: any) {
     const result = await prisma.product.create({
       data: {
-        model: item.model,
+        name: item.name,
+        description: item.description,
         price: item.price,
-        image: item.image
+        image: item.image,
       },
     });
   }
@@ -21,8 +21,9 @@ export class SneakersService {
   static async Delete(item: any) {
     const result = await prisma.product.delete({
       where: {
-        model: item.model
-      }
+        id: item.id, // как достать id, посмотреть
+        name: item.name,
+      },
     });
   }
 }
